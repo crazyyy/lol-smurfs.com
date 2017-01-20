@@ -48,8 +48,8 @@ $(document).ready(function() {
     /**
      * Navigation styling when user is on top of page
      */
-    function NavOrig()
-    {
+    function NavOrig() {
+      var imagePath = window.templateFolder + "/img/Lol-Smurfs-Icon-Black.png";
       $nav
         //.removeClass('alternate')
         .velocity({
@@ -66,7 +66,7 @@ $(document).ready(function() {
         .velocity({
           opacity: 0
         }, 50)
-        .attr("src","/lol-smurfs/images/logo/Lol-Smurfs-Icon-Black.png")
+        .attr("src",imagePath)
         .velocity({
           opacity: 1
         }, 50)
@@ -80,8 +80,8 @@ $(document).ready(function() {
     /**
      * Navigation styling when user has scrolled page
      */
-    function NavAlt()
-    {
+    function NavAlt(){
+      var imagePath = window.templateFolder + "/img/Lol-Smurfs-Icon-White.png";
       $nav
         //.addClass('alternate')
         .velocity({
@@ -98,7 +98,7 @@ $(document).ready(function() {
         .velocity({
           opacity: 0
         }, 50)
-        .attr("src","/lol-smurfs/images/logo/Lol-Smurfs-Icon-White.png")
+        .attr("src",imagePath)
         .velocity({
           opacity: 1
         }, 50)
@@ -212,7 +212,7 @@ $(document).ready(function() {
 
     // Show only slider 1
     if(currentLink.attr("id").indexOf("01")!=-1){
-      
+
       $("#scholarship-paragraph-01").addClass("active");
       $("#scholarship-image-01").addClass("active");
       $("#scholarship-slider-01").addClass("active");

@@ -4,3 +4,108 @@
 @import 'float';
 @import 'style-cf';
 @import 'richsnippetwidget';
+
+#banner-menu {
+  padding-top: .75em;
+  padding-bottom: 2em;
+
+  background: transparent;
+}
+
+.ui.inverted.vertical.masthead.center.aligned.segment {
+  padding-top: 6em;
+}
+
+#menu-sticky-top {
+  position: fixed;
+  z-index: 10;
+  top: 0 !important;
+
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 40px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: #2185d0;
+}
+
+.top-banner-link {
+  padding-left: 15px;
+
+  color: #fff;
+  &:hover {
+    color: #da5737;
+  }
+}
+
+.top-banner-social-icon {
+  z-index: 11;
+
+  color: #fff;
+  &:hover {
+    z-index: 11;
+
+    color: #da5737;
+  }
+}
+
+#mobile-menu .ui.center.aligned.button.open-cart {
+  position: relative;
+
+  width: 100%;
+  /* margin: 1rem 0; */
+}
+
+.star-right-side {
+  padding-left: 13px;
+}
+
+.ui {
+  &.currency.dropdown {
+    font-size: 1.25em;
+
+    min-width: 8em !important;
+    /*            border: 1px solid #fbc02d;*/
+
+    border-radius: 0;
+    .ui.selection.dropdown {
+      font-size: 1.25em;
+
+      min-width: 8em !important;
+      /*            border: 1px solid #fbc02d;*/
+
+      border-radius: 0;
+      &:hover,
+      &:focus {
+        /*            border: 1px solid!important;
+                    border-color: #fbc02d!important;
+                    box-shadow: none;*/
+      }
+    }
+  }
+  &.selection.active.dropdown {
+    /*            border: 1px solid!important;
+                border-color: #fbc02d!important;*/
+    .menu {
+      /*            border: 1px solid!important;
+                  border-color: #fbc02d!important;*/
+    }
+  }
+  &.currency.dropdown {
+    background: #f7f7f7 !important;
+    * {
+      background: #f7f7f7 !important;
+    }
+  }
+  &.selection.visible.dropdown > .text:not(.default) {
+    /*            color: rgb(251, 192, 45)!important;*/
+  }
+  &.currency {
+    &.dropdown .menu .selected.item,
+    &.selected,
+    &.dropdown .menu > .item:hover {
+      /*            color: rgb(251, 192, 45)!important;*/
+    }
+  }
+}
