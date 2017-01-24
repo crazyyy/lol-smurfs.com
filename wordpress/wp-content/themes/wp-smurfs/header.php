@@ -89,15 +89,8 @@
               <i class="large instagram icon"></i>
             </a>
           </div>
-          <div class="right floated column">
-            <ul class="right floated column">
-              <li><a href="" class="top-banner-link item scrollto">name</a></li>
-              <li><a href="" class="top-banner-link item scrollto">name</a></li>
-              <li><a href="" class="top-banner-link item scrollto">name</a></li>
-              <li><a href="" class="top-banner-link item scrollto">name</a></li>
-              <li><a href="" class="top-banner-link item scrollto">name</a></li>
-            </ul>
-
+          <div class="right floated column header-navi">
+            <?php wpeHeadNav(); ?>
           </div>
         </div>
       </div>

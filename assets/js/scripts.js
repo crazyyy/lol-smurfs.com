@@ -21,6 +21,30 @@ if (typeof jQuery === 'undefined') {
   console.log('jQuery has loaded');
 }
 // Place any jQuery/helper plugins in here.
+$(function() {
+  $('.headnav li a').each(function(index, el) {
+    $(this).addClass('top-banner-link item scrollto');
+    // var datalink = $(this).attr('href');
+    // if (datalink.indexOf('#')) {
+    //   $(this).attr('data-scrollto', datalink)
+    // }
+  });
+
+});
+(function() {
+  var $elements = $('.customer-review ');
+  var maxheight = 0;
+  $elements.each(function() {
+    if ($(this).height() > maxheight) {
+      maxheight = $(this).height();
+    }
+  });
+  $elements.height(maxheight);
+  $('#customer-reviews-one').height(maxheight);
+  $('#customer-reviews-two').height(maxheight);
+
+}());
+
 
 // REMOVE
 $(document).ready(function() {
@@ -44,18 +68,18 @@ $(document).ready(function() {
 
 // NEW
 $('#checkout').on('click', function(e) {
-  e.preventDefault();
-  var products = $('#shopping-cart').find('tbody tr');
-  if (products.length < 1) {
-    console.log(products.length);
-    return false;
-  }
-  window.location.href = 'https://www.lol-smurfs.com/checkout';
-})
-// NEW
-/* ----------------------------------------------------
-    Subscribe Out of Stock Modal
-  ----------------------------------------------------- */
+    e.preventDefault();
+    var products = $('#shopping-cart').find('tbody tr');
+    if (products.length < 1) {
+      console.log(products.length);
+      return false;
+    }
+    window.location.href = 'https://www.lol-smurfs.com/checkout';
+  })
+  // NEW
+  /* ----------------------------------------------------
+      Subscribe Out of Stock Modal
+    ----------------------------------------------------- */
 $('#out-of-stock-button').on('click', function(e) {
   e.preventDefault();
   $('#out-of-stock-modal').modal('show');
@@ -163,6 +187,7 @@ $(document).ready(function() {
     return false;
 
   });
+
   function CurrencyConverter(currencyData) {
 
     $('.currency-target').each(function() {
@@ -492,6 +517,7 @@ $(document).ready(function() {
     });
 
   });
+
   function UrlIsValid(url) {
     return /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url);
   }
@@ -819,6 +845,7 @@ $(document).ready(function() {
       }
     });
   }
+
   function PendingCheckout() {
     var checkoutBox = $('#cart-action-box');
     var checkoutButtons = $('#cart-checkout-box');
