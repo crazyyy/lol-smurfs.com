@@ -78,14 +78,14 @@
     <div class="ui container">
       <div class="ui relaxed grid">
         <div class="two column row">
-          <div class="left floated column" style="padding-left: 10%; position: relative; right: 7%;">
-            <a class="top-banner-social-icon" href="https://www.facebook.com/LolSmurfsCom" target="_blank" data-social-media="facebook">
+          <div class="left floated column">
+            <a class="top-banner-social-icon" href="#" target="_blank" data-social-media="facebook">
               <i class="large facebook icon"></i>
             </a>
-            <a class="top-banner-social-icon" href="https://twitter.com/Lol_Smurfs" target="_blank" data-social-media="twitter">
+            <a class="top-banner-social-icon" href="#" target="_blank" data-social-media="twitter">
               <i class="large twitter icon"></i>
             </a>
-            <a class="top-banner-social-icon" href="https://www.instagram.com/lolsmurfscom/" target="_blank" data-social-media="instagram">
+            <a class="top-banner-social-icon" href="#" target="_blank" data-social-media="instagram">
               <i class="large instagram icon"></i>
             </a>
           </div>
@@ -111,13 +111,10 @@
         </div>
       </div>
     </div>
-    <a class="item scrollto" href="http://demo3.saitobaza.ru#why-us" data-scrollto="#why-us">How It Works</a>
-    <a class="item scrollto" href="http://demo3.saitobaza.ru#about" data-scrollto="#about">About</a>
-    <a class="item scrollto" href="http://demo3.saitobaza.ru#pricing" data-scrollto="#pricing">Reviews</a>
-    <a class="item scrollto" href="http://demo3.saitobaza.ru#faq" data-scrollto="#faq">Smurf Accounts</a>
-    <a class="item" href="http://demo3.saitobaza.ru/blog">FAQ</a>
-    <a class="item scrollto" href="http://demo3.saitobaza.ru#reviews" data-scrollto="#reviews">League Tips</a>
-    <a class="item scrollto" href="http://demo3.saitobaza.ru#contact" data-scrollto="#contact">Contact</a>
+    <a class="item scrollto" href="<?php echo home_url(); ?>#why-us" data-scrollto="#why-us">How It Works</a>
+    <a class="item scrollto" href="<?php echo home_url(); ?>#about" data-scrollto="#about">About</a>
+    <a class="item scrollto" href="<?php echo home_url(); ?>#pricing" data-scrollto="#pricing">Reviews</a>
+    <a class="item scrollto" href="<?php echo home_url(); ?>#contact" data-scrollto="#contact">Contact</a>
   </div>
   <div id="cm-optin-modal" class="ui small modal">
     <h3 class="header">

@@ -282,7 +282,7 @@
                   <div class="content">
                     <div class="center aligned header">General Questions</div>
                     <div class="description">Pre-purchase questions that are not covered in our
-                      <a class="scrollto" href="http://demo3.saitobaza.ru#faq" data-scrollto="#faq">FAQ</a>.</div>
+                      <a class="scrollto" href="<?php echo home_url(); ?>#faq" data-scrollto="#faq">FAQ</a>.</div>
                   </div>
                 </div>
               </div>

@@ -7,16 +7,16 @@
         </div>
         <div class="three wide column computer only">
           <div class="ui inverted link list">
-            <a class="item scrollto" href="http://demo3.saitobaza.ru#pricing" data-scrollto="#pricing">LoL Smurfs Pricing</a>
-            <a class="item scrollto" href="http://demo3.saitobaza.ru#reviews" data-scrollto="#reviews">LoL Smurfs Reviews</a>
-            <a class="item scrollto" href="http://demo3.saitobaza.ru#faq" data-scrollto="#faq">FAQs</a>
+            <a class="item scrollto" href="<?php echo home_url(); ?>#pricing" data-scrollto="#pricing">LoL Smurfs Pricing</a>
+            <a class="item scrollto" href="<?php echo home_url(); ?>#reviews" data-scrollto="#reviews">LoL Smurfs Reviews</a>
+            <a class="item scrollto" href="<?php echo home_url(); ?>#faq" data-scrollto="#faq">FAQs</a>
           </div>
         </div>
         <div class="three wide column computer only">
           <div class="ui inverted link list">
-            <a class="item scrollto" href="http://demo3.saitobaza.ru#about" data-scrollto="#about">About LoL Smurfs</a>
-            <a class="item scrollto" href="http://demo3.saitobaza.ru#why-us" data-scrollto="#why-us">Why Us</a>
-            <a class="item scrollto" href="http://demo3.saitobaza.ru#contact" data-scrollto="#contact">Contact Us</a>
+            <a class="item scrollto" href="<?php echo home_url(); ?>#about" data-scrollto="#about">About LoL Smurfs</a>
+            <a class="item scrollto" href="<?php echo home_url(); ?>#why-us" data-scrollto="#why-us">Why Us</a>
+            <a class="item scrollto" href="<?php echo home_url(); ?>#contact" data-scrollto="#contact">Contact Us</a>
           </div>
         </div>
         <div class="three wide column computer only">
@@ -39,8 +39,8 @@
       <br>
 
       <div class="ui horizontal inverted small divided link list ">
-        <a class="item " href="http://demo3.saitobaza.ru/terms-and-conditions ">Terms and Conditions</a>
-        <a class="item " href="http://demo3.saitobaza.ru/ls-sitemap.xml ">Site Map</a>
+        <a class="item " href="<?php echo home_url(); ?>/terms-and-conditions ">Terms and Conditions</a>
+        <a class="item " href="<?php echo home_url(); ?>/ls-sitemap.xml ">Site Map</a>
       </div>
 
       <br>
