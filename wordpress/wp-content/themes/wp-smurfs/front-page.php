@@ -95,95 +95,23 @@
         <div class="ui basic padded segment">
           <div class="ui center aligned text container">
             <i>
-
               <div id="rs_container" itemscope="" itemtype="http://schema.org/LocalBusiness">
                 <p id="ruk_main">
-                  <span itemprop="name" id="rs_companyName" onclick="showRukReviews()">Lol-Smurfs</span>
-                  <span itemprop="aggregateRating" id="rs_rating" itemscope=""
-                  itemtype="http://schema.org/AggregateRating" onclick="showRukReviews()">is rated
-                    <span itemprop="ratingValue">4.82</span>stars by Review.io based on
-                    <span itemprop="ratingCount">631</span>merchant reviews</span>
+                  <?php the_field('reviews_rating_descr_one'); ?>
                 </p>
-                <div id="ruk_rs_widget" class="ruk_hidden" onclick="hideRukReviews()">
-                  <div id="ruk_rs_container">
-                    <div class="ruk_reviews">
-                      <div class="ruk_head">
-                        <div>
-                          <b>4.82 / 5</b>Rating</div>
-                        <div>
-                          <b>631</b>Reviews</div>
-                        <div>
-                          <a target="_blank" href="https://www.reviews.io/company-reviews/store/lol-smurfs">
-<i class="ruk-icon-reviews-logo-01"></i>
-            </a>
-          </div>
-        </div>
-        <div class="ruk_review" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
-          <div class="ruk_review_text" itemprop="description">Everything worked perfectly and instantly.</div>
-          <div itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <meta itemprop="ratingValue" content="5">
-            <meta itemprop="bestRating" content="5">
-            <div class="ruk_review_rating">
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
+
+              </div>
+              </i>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui text container">
+              <div class="ui center aligned basic segment nopad">
+                <?php the_field('reviews_rating_descr_two'); ?>
+              </div>
             </div>
           </div>
-          <div class="ruk_review_author" itemprop="author">Anonymous</div>
-        </div>
-        <div class="ruk_review" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
-          <div class="ruk_review_text" itemprop="description">..........</div>
-          <div itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <meta itemprop="ratingValue" content="4">
-            <meta itemprop="bestRating" content="5">
-            <div class="ruk_review_rating">
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-empty-star-01"></i>
-            </div>
-          </div>
-          <div class="ruk_review_author" itemprop="author">Anonymous</div>
-        </div>
-        <div class="ruk_review" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
-          <div class="ruk_review_text" itemprop="description">I got to skip the leveling process</div>
-          <div itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <meta itemprop="ratingValue" content="3">
-            <meta itemprop="bestRating" content="5">
-            <div class="ruk_review_rating">
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-full-star-01"></i>
-              <i class="ruk-icon-empty-star-01"></i>
-              <i class="ruk-icon-empty-star-01"></i>
-            </div>
-          </div>
-          <div class="ruk_review_author" itemprop="author">Anonymous</div>
-        </div>
-        <div class="ruk_footer">
-          <a href="https://www.reviews.io/company-reviews/store/lol-smurfs" target="_blank">Click to read more Lol-Smurfs reviews at Reviews.io.</a>
         </div>
       </div>
-    </div>
-  </div>
-  </div>
-
-  </i>
-  </div>
-  <div class="ui hidden divider"></div>
-  <div class="ui text container">
-    <div class="ui center aligned basic segment nopad">All our customer reviews are from genuine LoL Smurfs customers and are independently collected & verified by Reviews.co.uk. To view our full review page
-      <a href="http://demo3.saitobaza.ru/reviews">click here</a>.</div>
-  </div>
-  </div>
-  </div>
-  </div>
   <div id="why-us" class="ui basic segment wp-marker" data-sector="why-us">
     <div id="why-us-bg">
       <svg>
@@ -198,307 +126,85 @@
     </div>
     <div class="ui container">
       <div class="ui basic padded segment">
-        <h2 class="ui center aligned header">Why Buy Your League Of Legends Accounts At LoL Smurfs?</h2>
+        <h2 class="ui center aligned header"><?php the_field('why_block_title'); ?></h2>
         <div class="ui stackable grid">
           <div class="doubling stackable four column row">
-            <div class="four wide center aligned column">
-              <div class="ui fluid card" data-hidden-on-load="true">
-                <div class="center aligned image">
-                  <i class="huge blue mail outline icon"></i>
-                </div>
-                <div class="content">
-                  <div class="header">Instant Account Delivery</div>
-                  <div class="description">
-                    <p>When you buy a League of Legends account from us you will receive your log in details via email INSTANTLY!</p>
+
+            <?php if( have_rows('why_block_blocks') ): while ( have_rows('why_block_blocks') ) : the_row(); ?>
+              <div class="four wide center aligned column">
+                <div class="ui fluid card" data-hidden-on-load="true">
+                  <div class="center aligned image">
+                    <i class="huge blue <?php the_sub_field('why_block_subblock_ico'); ?> icon"></i>
+                  </div>
+                  <div class="content">
+                    <div class="header"><?php the_sub_field('why_block_subblock_title'); ?></div>
+                    <div class="description">
+                      <p><?php the_sub_field('why_block_subblock_description'); ?></p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="four wide center aligned column">
-              <div class="ui fluid card" data-hidden-on-load="true">
-                <div class="center aligned image">
-                  <i class="huge blue paypal icon"></i>
-                </div>
-                <div class="content">
-                  <div class="header">Great Prices</div>
-                  <div class="description">
-                    <p>Here at LoL Smurfs we have great prices on all our League of Legends & Smurf accounts across various regions.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="four wide center aligned column">
-              <div class="ui fluid card" data-hidden-on-load="true">
-                <div class="center aligned image">
-                  <i class="huge blue checkmark icon"></i>
-                </div>
-                <div class="content">
-                  <div class="header">24/7 Account Support</div>
-                  <div class="description">
-                    <p>Got a problem? We’re here for you! 24/7 support by email and live chat – more than any other LoL account website!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="four wide center aligned column">
-              <div class="ui fluid card" data-hidden-on-load="true">
-                <div class="center aligned image">
-                  <i class="huge blue diamond icon"></i>
-                </div>
-                <div class="content">
-                  <div class="header">Quality LoL Accounts</div>
-                  <div class="description">
-                    <p>We sell the highest quality LoL accounts around with the lowest ban rates of any seller – all covered by our warranty.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <?php endwhile; endif; ?>
+
           </div>
         </div>
       </div>
       <div class="ui hidden divider"></div>
-      <div class="ui center aligned basic segment">
-        <p style="font-size: 1.4em;">If you want any more reasons to buy your League of Legends smurf account from us then
-          <a href="http://demo3.saitobaza.ru/blog/why-buy-from-lol-smurfs">click here</a>.</p>
-      </div>
+
     </div>
   </div>
   <div id="about" class="ui basic segment wp-marker" data-sector="about">
-    <h2 class="ui center aligned large header about-header">About LoL Smurfs</h2>
+    <h2 class="ui center aligned large header about-header"><?php the_field('about_block_title'); ?></h2>
     <div class="ui container centered grid">
       <div class="ui basic padded segment">
         <div class="ui grid centered">
           <div class="row">
             <div class="eight wide flex-mid column">
-              <h3 class="ui center aligned header">We are the biggest, safest, & best place in the whole world to buy League of Legends accounts!</h3>
-              <div class="ui center aligned basic segment nopad">We provide our customers with the best League of Legends accounts on the market. All our LoL accounts come with instant delivery, 24/7 support and our unique special warranty to protect your account from bans.</div>
+              <h3 class="ui center aligned header"><?php the_field('about_block_subtitle'); ?></h3>
+              <div class="ui center aligned basic segment nopad"><?php the_field('about_block_description'); ?></div>
             </div>
           </div>
           <div class="row">
             <div class="eight wide flex-mid column centered">
               <div class="ui large list center aligned grid">
-                <div class="item">
-                  <i class="blue star icon"></i>
-                  <div class="content">
-                    <div class="header">Safe & secure payments through PayPal</div>
+
+                <?php if( have_rows('about_block_repeater') ): while ( have_rows('about_block_repeater') ) : the_row(); ?>
+                  <div class="item">
+                    <i class="blue star icon"></i>
+                    <div class="content">
+                      <div class="header"><?php the_sub_field('about_block_repeater_item'); ?></div>
+                    </div>
+                    <i class="blue star icon star-right-side"></i>
                   </div>
-                  <i class="blue star icon star-right-side"></i>
-                </div>
-                <div class="item">
-                  <i class="blue star icon"></i>
-                  <div class="content">
-                    <div class="header">Special warranty to protect from bans</div>
-                  </div>
-                  <i class="blue star icon star-right-side"></i>
-                </div>
-                <div class="item">
-                  <i class="blue star icon"></i>
-                  <div class="content">
-                    <div class="header">Highest quality LoL accounts around</div>
-                  </div>
-                  <i class="blue star icon star-right-side"></i>
-                </div>
-                <div class="item">
-                  <i class="blue star icon"></i>
-                  <div class="content">
-                    <div class="header">Instant delivery on all accounts</div>
-                  </div>
-                  <i class="blue star icon star-right-side"></i>
-                </div>
+                <?php endwhile; endif; ?>
+
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="ui huge orange button scrollto" data-scrollto="#pricing" style="background-color: #da5737; border-radius: 4px;">Buy A LoL Smurf Now</div>
+            <div class="ui huge orange button scrollto" data-scrollto="#pricing"><?php the_field('about_block_button'); ?></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div id="faq" class="basic ui padded segment wp-marker">
-    <h2 class="ui center aligned faq header">Frequently Asked Questions</h2>
+    <h2 class="ui center aligned faq header"><?php the_field('faq_block_title'); ?></h2>
     <div class="ui container">
-      <div class="ui header">About LoL Smurfs</div>
+      <?php if( have_rows('faq_block_faq') ): while ( have_rows('faq_block_faq') ) : the_row(); ?>
+      <div class="ui header"><?php the_sub_field('faq_block_heading'); ?></div>
       <div class="ui styled fluid accordion">
-        <div class="title active">
-          <i class="dropdown icon"></i>What are Smurfs in LoL?</div>
-        <div class="content">
-          <p class="transition active">Smurfs are accounts belonging to players who already have another main LoL account that is level 30. A smurf will often be a lower level account that a player uses to train on against less skilled opponents. Smurfs from LoL-Smurfs are already
-            level 30 so you don't need to waste time leveling up again, but are unranked meaning you can still practice against the less skilled opponents.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Is LoL-Smurfs.com safe?</div>
-        <div class="content">
-          <p class="transition hidden">We are 100% safe & secure, but don't just take our word for it - check out our excellent customer reviews on our
-            <a href="https://www.facebook.com/LolSmurfsCom/" target="_blank">Facebook</a>page or
-            <a href="http://demo3.saitobaza.ru/reviews">our reviews section</a>. All our reviews are handled by independently by Reviews.io - we can't edit or delete them and they're all from real, verified customers. In addition, our primary payment
-            processor is PayPal, the most secure payment service available.
-            <a href="http://demo3.saitobaza.ru/blog/why-buy-from-lol-smurfs/"> Still not convinced? Click here for more information!</a>
-          </p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>How can I contact LoL-Smurfs?</div>
-        <div class="content">
-          <p class="transition hidden">You can contact us through our contact form at the bottom of this page or directly to our email address. Email support is offered 24/7.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>How do you level your accounts?</div>
-        <div class="content">
-          <p class="transition hidden">We level our accounts using a unique technology that we developed. For more information about the process
-            <a href="http://demo3.saitobaza.ru/blog/why-buy-from-lol-smurfs/">click here.</a>We are the only LoL account seller to use this unique technology and as such have the lowest ban rates of anyone!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Who produces your LoL smurf accounts?</div>
-        <div class="content">
-          <p class="transition hidden">We produce all our LoL smurf accounts ourselves. We are the only people who have access to these accounts until they are sold to you - they do not come from any third party.</p>
-        </div>
+        <?php if( have_rows('faq_block_faq_items') ): while ( have_rows('faq_block_faq_items') ) : the_row(); ?>
+          <div class="title">
+            <i class="dropdown icon"></i><?php the_sub_field('faq_block_faq_title'); ?>
+          </div>
+          <div class="content">
+            <p class="transition active"><?php the_sub_field('faq_block_faq_content'); ?></p>
+          </div>
+        <?php endwhile; endif; ?>
       </div>
-      <div class="ui header">Purchase & Delivery FAQs</div>
-      <div class="ui styled fluid accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>How will you deliver my LoL account?</div>
-        <div class="content">
-          <p class="transition hidden">After purchasing your LoL account the login details will be displayed INSTANTLY on screen. This automated services works 24/7, 365 days a year - no more waiting for emails with account details in!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Will my LoL account be delivered to my email address?</div>
-        <div class="content">
-          <p class="transition hidden">As well as instant delivery we will also email a copy of your login details to your PayPal email address. Please read this email carefully - it contains important information on how to activate your special warranty!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Do you support bulk orders of LoL Accounts?</div>
-        <div class="content">
-          <p class="transition hidden">Yes, we offer bulk purchases of League of Legends accounts to resellers or those requiring a large number of accounts. Please contact us for more details.
-          </p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Which regions do you sell LoL accounts for?</div>
-        <div class="content">
-          <p class="transition hidden">Currently we sell League of Legends Smurf Accounts for EUW, EUNE, NA, TR, BR. If you need another region please contact us, we might be able to help you!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>I purchased a LoL account but didn't receive any email or details!</div>
-        <div class="content">
-          <p class="transition hidden">Please check your spam folder, as it may be that your details have landed in there. If you still don't have an email please contact us and we'll get it sorted for you right away.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>What payment options do you accept?</div>
-        <div class="content">
-          <p class="transition hidden">We currently accept all of our payments through PayPal as this is an easy and secure method of payment. PayPal is accessed through their own web servers which means we don't store, or even see, any of your payment details.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Do I need a PayPal account?</div>
-        <div class="content">
-          <p class="transition hidden">No - You can purchase through PayPal without an account by simply using your credit/debit or bank card.</p>
-        </div>
-      </div>
-      <div class="ui header">LoL Account FAQs</div>
-      <div class="ui styled fluid accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>What are the summoner names of the accounts you provide?</div>
-        <div class="content">
-          <p class="transition hidden">The summoner names of the accounts we provide are random, but have some logic. For example: "God492Ryuk" or "Xhylase".</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Can I choose the account I want by its username or summoner name?</div>
-        <div class="content">
-          <p class="transition hidden">No, unfortunately you can't. Account details are not assigned to an order until after purchase. However, you can change your summoner name in the League of Legends client using either RP or IP.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>I recently bought an unranked LoL account but I can't play any ranked games, why?</div>
-        <div class="content">
-          <p class="transition hidden">You need at least 16 champions in order to play ranked games. All our accounts have enough IP to buy 16 champions so just head over to the store in the League of Legends client, buy some champions and start playing!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>I want to buy an unranked LoL account, how much IP + RP will it have?</div>
-        <div class="content">
-          <p class="transition hidden">IP Package accounts (e.g. EUW 20k IP) have a set amount of IP and RP on them but no champions or runes unlocked. Special accounts come with at least the number of champions stated but do not have any set amount of IP or RP. Some special accounts
-            will also have runes but this isn't guaranteed.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Can I play Ranked right away?</div>
-        <div class="content">
-          <p class="transition hidden">Yes! All accounts come with enough IP or champs (depends on the package) to play ranked games!</p>
-        </div>
-      </div>
-      <div class="ui header">LoL Account Safety & Security FAQs</div>
-      <div class="ui styled fluid accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>How can I change my LoL account's password and email?</div>
-        <div class="content">
-          <p class="transition hidden">You can change your password & email via the League of Legends website. A guide is included in your welcome/purchase email.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Can my main account get banned if I buy a smurf?</div>
-        <div class="content">
-          <p class="transition hidden">No, your main account will not be banned. There no connection at all between your smurf account and your main account.</p>
-        </div>
-      </div>
-      <div class="ui header">Payment FAQs</div>
-      <div class="ui styled fluid accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>The Product Prices are in the Wrong Currency!</div>
-        <div class="content">
-          <p class="transition hidden">Our Website allows you to display prices prices in Australian Dollars, Chinese Yuan, Euros, Pounds and American Dollars. It should detect your region and automatically adjust but if it hasn’t then you can change it using the drop down menu beneath
-            the region selector.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Does the Displayed Currency Affect my Payment?</div>
-        <div class="content">
-          <p class="transition hidden">No – PayPal will automatically convert the payment into your local currency or the currency of your bank account.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Do you accept PaySafeCard as a payment method?</div>
-        <div class="content">
-          <p class="transition hidden">Unfortunately no, we do not accept PaySafeCard at the moment. If you are looking to buy with PaySafeCard please contact us and we will work out a solution.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Do you accept Visa / MasterCard / AMEX?</div>
-        <div class="content">
-          <p class="transition hidden">Yes, we do. You can pay directly with a Visa / Mastercard / AMEX using PayPal without having a PayPal account!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>I paid with eCheck but didn't receive the account, why?</div>
-        <div class="content">
-          <p class="transition hidden">If you choose to pay with eCheck with PayPal, it may take several days for the payment to get cleared by PayPal. After the payment is cleared and completed our automatic systems will send you your League of Legends account to your PayPal email.
-            If you wish to receive your account instantly please use another method of payment.</p>
-        </div>
-      </div>
-      <div class="ui header">Warranty FAQs</div>
-      <div class="ui styled fluid accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>You claim to have Special Warranty on all of your League of Legends Unranked Smurf Accounts, what is this?</div>
-        <div class="content">
-          <p class="transition hidden">We are the ONLY website with our unique special warranty. It means that if your account gets banned due to "account sharing / account trading", we will give a new LoL smurf account for free! Please make sure you read your welcome email carefully
-            for details on how to activate your special warranty!
-          </p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>Does your warranty cover bans due to in-game flaming / intentional feeding / hacking / client modifications?</div>
-        <div class="content">
-          <p class="transition hidden">NO! If you do any of the things mentioned above and get banned, we will not provide a new account. Do NOT modify your League of Legends client!</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>What does your warranty cover?</div>
-        <div class="content">
-          <p class="transition hidden">If your account is banned through any fault of ours we'll replace it absolutely free - This protects you from any mistakes or defects we make.</p>
-        </div>
-        <div class="title">
-          <i class="dropdown icon"></i>How long does it last?</div>
-        <div class="content">
-          <p class="transition hidden">Our warranty will cover your League of Legends smurf account for the rest of it's existence.</p>
-        </div>
-      </div>
-      <div class="ui header">LoL-Smurfs Scholarship FAQs</div>
-      <div class="ui styled fluid accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>I've heard you offer a LoL-Smurfs Scholarship. What is this?</div>
-        <div class="content">
-          <p class="transition hidden">Yes, we do! You can find more about this here
-            <a href="/scholarship" target="_blank">Scholarship</a>
-          </p>
-        </div>
-      </div>
+    <?php endwhile; endif; ?>
     </div>
     <div id="contact" class="ui basic segment wp-marker" style="margin-top: 0;">
       <h2 class="ui center aligned contact header">

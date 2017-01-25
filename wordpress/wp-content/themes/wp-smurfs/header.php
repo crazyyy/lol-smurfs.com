@@ -96,31 +96,7 @@
       </div>
     </div>
   </div>
-  <div id="banner-menu" class="ui fixed secondary inverted pointing menu" style="margin-top: 40px; padding-bottom: 2em; background-color: rgba(27, 28, 29, 0);">
-    <div class="ui container">
-      <a class="ui middle aligned item" href="http://demo3.saitobaza.ru">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/Lol-Smurfs-Icon-Black.png">
-      </a>
-      <a class="toc item">
-        <i class="sidebar icon"></i>
-      </a>
-      <a class="item scrollto" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box">Smurf Accounts</a>
-      <a class="item scrollto region-link" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box " data-package="NA" data-packagetitle="North America">North America</a>
-      <a class="item scrollto region-link" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box" data-package="EUW" data-packagetitle="Europe West">Europe West</a>
-      <a class="item scrollto region-link" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box" data-package="EUNE" data-packagetitle="Europe Nordic & East">Europe NE</a>
-      <a class="item scrollto region-link" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box" data-package="BR" data-packagetitle="Brazil">Brazil</a>
-      <a class="item scrollto region-link" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box" data-package="RU" data-packagetitle="Russia">Russia</a>
-      <a class="item scrollto region-link" href="http://demo3.saitobaza.ru#pricing-button-box" data-scrollto="#pricing-button-box" data-package="PBE" data-packagetitle="Public Beta Environment">PBE</a>
-      <div class="right center aligned item open-cart-box">
-        <div class="ui center aligned button open-cart" tabindex="0">
-          <div class="ui center aligned content">
-            <i class="shop icon"></i>
-            <div class="floating ui blue label cart-quantity-label">0</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!-- Sidebar Menu -->
   <div id="mobile-menu" class="ui vertical dummed sidebar menu left">
     <div style="padding: 20px 20px 0;">
