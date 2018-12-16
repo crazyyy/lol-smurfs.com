@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-12-04 15:34:10+0000\n"
+"PO-Revision-Date: 2016-12-04 22:42:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,19 +99,19 @@ msgstr "Число меньше минимально допустимого."
 msgid "The number format is invalid."
 msgstr "Формат числа некорректен."
 
-#: modules/file.php:211
+#: modules/file.php:214
 msgid "There was an error uploading the file."
 msgstr "При загрузке файла произошла ошибка."
 
-#: modules/file.php:206
+#: modules/file.php:209
 msgid "The file is too big."
 msgstr "Файл слишком большой."
 
-#: modules/file.php:201
+#: modules/file.php:204
 msgid "You are not allowed to upload files of this type."
 msgstr "Вам не разрешено загружать файлы этого типа."
 
-#: modules/file.php:196
+#: modules/file.php:199
 msgid "There was an unknown error uploading the file."
 msgstr "При загрузке файла произошла неизвестная ошибка."
 
@@ -372,7 +372,7 @@ msgstr "Генерируйте тег формы для однострочног
 
 #: modules/text.php:221
 msgid "Generate a form-tag for a single-line email address input field. For more details, see %s."
-msgstr "Создать форму тега для однострочного поля ввода адреса электронной почты. Для дополнительной информации смотрите %s."
+msgstr "Генерируйте тег формы для однострочного поля ввода адреса электронной почты. Для более подробной информации см. %s."
 
 #: modules/text.php:219
 msgid "Generate a form-tag for a single-line plain text input field. For more details, see %s."
@@ -506,51 +506,51 @@ msgstr "Число меньше минимального предела"
 msgid "Number format that the sender entered is invalid"
 msgstr "Числовой формат, введенный отправителем, неверен"
 
-#: modules/file.php:317
+#: modules/file.php:320
 msgid "This contact form contains file uploading fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
 msgstr "Эта контактная форма содержит поля загрузки файлов, но временная папка для файлов (%s) не существует или закрыта для записи. Вы можете создать эту папку или изменить разрешения вручную."
 
-#: modules/file.php:291
+#: modules/file.php:294
 msgid "To attach the file uploaded through this field to mail, you need to insert the corresponding mail-tag (%s) into the File Attachments field on the Mail tab."
 msgstr "Чтобы прикрепить файл загруженный через это поле к почте, вам нужно вставить соответствующий почтовый-тег (%s) в поле прикрепления файлов на вкладке Почта."
 
-#: modules/file.php:263
+#: modules/file.php:266
 msgid "Acceptable file types"
 msgstr "Разрешенные типы файлов"
 
-#: modules/file.php:258
+#: modules/file.php:261
 msgid "File size limit (bytes)"
 msgstr "Предельный размер файла (в байтах)"
 
-#: modules/file.php:233
+#: modules/file.php:236
 msgid "File Uploading and Attachment"
 msgstr "Загрузка файла и прикреплений"
 
-#: modules/file.php:233
+#: modules/file.php:236
 msgid "http://contactform7.com/file-uploading-and-attachment/"
 msgstr "http://contactform7.com/file-uploading-and-attachment/"
 
-#: modules/file.php:231
+#: modules/file.php:234
 msgid "Generate a form-tag for a file uploading field. For more details, see %s."
 msgstr "Генерируйте тег формы для поля загрузки файла. Для более подробной информации см. %s."
 
-#: modules/file.php:223
+#: modules/file.php:226
 msgid "file"
 msgstr "файл"
 
-#: modules/file.php:210
+#: modules/file.php:213
 msgid "Uploading a file fails for PHP error"
 msgstr "Загрузка файла не удалась из-за ошибки PHP"
 
-#: modules/file.php:205
+#: modules/file.php:208
 msgid "Uploaded file is too large"
 msgstr "Загруженный файл слишком большой"
 
-#: modules/file.php:200
+#: modules/file.php:203
 msgid "Uploaded file is not allowed for file type"
 msgstr "Тип файла запрещен к загрузке"
 
-#: modules/file.php:195
+#: modules/file.php:198
 msgid "Uploading a file fails for any reason"
 msgstr "Загрузка файла неудачна по неизвестной причине"
 
@@ -626,14 +626,14 @@ msgstr "Поставьте метку сначала, после - чекбок�
 msgid "One option per line."
 msgstr "Один вариант в каждой строке."
 
-#: modules/checkbox.php:307 modules/date.php:167 modules/file.php:247
+#: modules/checkbox.php:307 modules/date.php:167 modules/file.php:250
 #: modules/number.php:175 modules/select.php:185 modules/text.php:242
 #: modules/textarea.php:154
 msgid "Required field"
 msgstr "Обязательное поле"
 
 #: modules/checkbox.php:303 modules/checkbox.php:306 modules/date.php:163
-#: modules/date.php:166 modules/file.php:243 modules/file.php:246
+#: modules/date.php:166 modules/file.php:246 modules/file.php:249
 #: modules/number.php:166 modules/number.php:169 modules/select.php:181
 #: modules/select.php:184 modules/text.php:238 modules/text.php:241
 #: modules/textarea.php:150 modules/textarea.php:153
@@ -709,7 +709,7 @@ msgid "To use CAPTCHA, you need <a href=\"http://wordpress.org/extend/plugins/re
 msgstr "Чтобы использовать CAPTCHA, вам нужно установить плагин <a href=\"http://wordpress.org/extend/plugins/really-simple-captcha/\">Really Simple CAPTCHA</a>."
 
 #: modules/acceptance.php:189 modules/checkbox.php:353 modules/date.php:219
-#: modules/file.php:286 modules/number.php:227 modules/quiz.php:218
+#: modules/file.php:289 modules/number.php:227 modules/quiz.php:218
 #: modules/really-simple-captcha.php:283 modules/recaptcha.php:476
 #: modules/select.php:227 modules/submit.php:90 modules/text.php:306
 #: modules/textarea.php:189
@@ -717,7 +717,7 @@ msgid "Insert Tag"
 msgstr "Вставить тег"
 
 #: modules/acceptance.php:176 modules/checkbox.php:340 modules/date.php:207
-#: modules/file.php:273 modules/number.php:215 modules/quiz.php:205
+#: modules/file.php:276 modules/number.php:215 modules/quiz.php:205
 #: modules/really-simple-captcha.php:256 modules/really-simple-captcha.php:271
 #: modules/recaptcha.php:463 modules/select.php:214 modules/submit.php:77
 #: modules/text.php:293 modules/textarea.php:176
@@ -725,7 +725,7 @@ msgid "Class attribute"
 msgstr "атрибут класса"
 
 #: modules/acceptance.php:171 modules/checkbox.php:335 modules/date.php:202
-#: modules/file.php:268 modules/number.php:210 modules/quiz.php:200
+#: modules/file.php:271 modules/number.php:210 modules/quiz.php:200
 #: modules/really-simple-captcha.php:251 modules/really-simple-captcha.php:266
 #: modules/recaptcha.php:458 modules/select.php:209 modules/submit.php:72
 #: modules/text.php:288 modules/textarea.php:171
@@ -747,7 +747,7 @@ msgid "Options"
 msgstr "Параметры"
 
 #: modules/acceptance.php:155 modules/checkbox.php:314 modules/date.php:173
-#: modules/file.php:253 modules/number.php:181 modules/quiz.php:184
+#: modules/file.php:256 modules/number.php:181 modules/quiz.php:184
 #: modules/really-simple-captcha.php:241 modules/select.php:191
 #: modules/text.php:248 modules/textarea.php:160
 msgid "Name"
@@ -1222,7 +1222,7 @@ msgstr "Редактировать форму"
 msgid "Contact"
 msgstr "Contact Form 7"
 
-#. #-#-#-#-#  tmp-contact-form-7.pot (Contact Form 7 4.6)  #-#-#-#-#
+#. #-#-#-#-#  tmp-contact-form-7.pot (Contact Form 7 4.6.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/admin.php:21 modules/flamingo.php:138
 msgid "Contact Form 7"

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Super Cache - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-11-12 15:23:14+0000\n"
+"PO-Revision-Date: 2016-11-12 15:42:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -264,6 +264,10 @@ msgstr "Произошла ошибка! Посетите %s чтобы удал
 #: wp-cache.php:2947
 msgid "[%s] Front page is gzipped! Please clear cache!"
 msgstr "[%s] Главная страница сжата с помощью gzipped! Удалите кэш!"
+
+#: wp-cache.php:2926
+msgid "Warning! WP Super Cache caching <strong>was</strong> broken but has been <strong>fixed</strong>! The script advanced-cache.php could not load wp-cache-phase1.php.<br /><br />The file %1$s/advanced-cache.php has been recreated and WPCACHEHOME fixed in your wp-config.php. Reload to hide this message."
+msgstr "Предупреждение! Кеширование WP Super Cache caching <strong>было</strong> нарушено и поэтому сейчас <strong>исправлено</strong>!  Скрипт advanced-cache.php не смог загрузить wp-cache-phase1.php.<br /><br />Файл %1$s/advanced-cache.php был заново создан и константа WPCACHEHOME была исправлена в  wp-config.php. Перезагрузите страницу чтобы убрать это сообщение."
 
 #: wp-cache.php:2923
 msgid "WP Super Cache is disabled. Please go to the <a href=\"%s\">plugin admin page</a> to enable caching."
@@ -667,6 +671,10 @@ msgid "Interval:"
 msgstr "Интервал:"
 
 #: wp-cache.php:1761
+msgid "Check for stale cached files at this time <strong>(UTC)</strong> or starting at this time every <em>interval</em> below."
+msgstr "Проверять устаревшие файлы кеша в это время <strong>(UTC)</strong> или начиная с этого времени с <em>интервалом</em> ниже."
+
+#: wp-cache.php:1761
 msgid "HH:MM"
 msgstr "ЧЧ:ММ"
 
@@ -918,6 +926,10 @@ msgstr "Простые"
 #: wp-cache.php:1333
 msgid "Available Plugins"
 msgstr "Доступные плагины"
+
+#: wp-cache.php:1323
+msgid "<strong>Warning</strong>! Due to the way WordPress upgrades plugins, the plugins you upload to wp-super-cache/plugins/ will be deleted when you upgrade WP Super Cache. You can avoid this by loading the plugins from elsewhere. Set <strong>$wp_cache_plugins_dir</strong> to the new location in wp-config.php and WP Super Cache will look there instead.<br />More info available in the <a href=\"http://ocaoimh.ie/wp-super-cache-developers/\">developer documentation</a>."
+msgstr "<strong>Предупреждение</strong>! Способом которым WordPress обновляет плагины, всё что вы загрузите в wp-super-cache/plugins/ будет удалено при обновлении WP Super Cache. Вы можете избежать этого загружая плагины из другого места. Установите <strong>$wp_cache_plugins_dir</strong> на нужную папку в wp-config.php и WP Super Cache будет смотреть там<br /> Больше информации доступно в <a href=\"http://ocaoimh.ie/wp-super-cache-developers/\">документации разработчика</a>"
 
 #: wp-cache.php:1322
 msgid "This is strictly an advanced feature only and knowledge of both PHP and WordPress actions is required to create them."
@@ -1389,6 +1401,10 @@ msgstr "Настройки WP Super Cache"
 msgid "<strong>Warning!</strong> You attempted to enable compression but <code>zlib.output_compression</code> is enabled. See #21 in the Troubleshooting section of the readme file."
 msgstr "<strong>Внимание!</strong> Вы пытаетесь включить сжатие, но модуль <code>zlib.output_compression</code> отключен. Смотрите пункт номер 21 раздела \"Описание проблем\" в файле readme.txt (на англ.)"
 
+#: wp-cache.php:404
+msgid "It appears you have WordPress installed in a sub directory as described <a href=\"http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory\">here</a>. Unfortunately, WordPress writes to the .htaccess in the install directory, not where your site is served from.<br />When you update the rewrite rules in this plugin you will have to copy the file to where your site is hosted. This will be fixed in the future."
+msgstr "Похоже WordPress был установлен в подкаталог как описано <a href=\"http://codex.wordpress.org/Giving_WordPress_Its_Own_Directory\">тут</a>. К сожалению WordPress пишет .htaccess в свой каталог установки, а не туда откуда отдается сайт.<br />При обновлении правил перезаписи URL в этом плагине, вам придется вручную скопировать файл в корень сайта. Это будет исправлено в будущем."
+
 #: wp-cache.php:403
 msgid ".htaccess file may need to be moved"
 msgstr "Файл .htaccess нужно переместить"
@@ -1412,6 +1428,10 @@ msgstr "Необходимо настроить кэширование на ст
 #: wp-cache.php:375
 msgid "Required to serve compressed supercache files properly."
 msgstr "Необходимо для правильного сжатия файлов."
+
+#: wp-cache.php:362
+msgid "Add the rules yourself. Edit %s.htaccess and find the block of code enclosed by the lines <code># BEGIN WPSuperCache</code> and <code># END WPSuperCache</code>. There are two sections that look very similar. Just below the line <code>%%{HTTP:Cookie} !^.*(comment_author_|%s|wp-postpass_).*$</code> add these lines: (do it twice, once for each section)"
+msgstr "Добавьте правила сами. Отредактируйте %s.htaccess и найдите блок кода заключеный между линиями <code># BEGIN WPSuperCache</code> и <code># END WPSuperCache</code>. Тут в двух очень похожих секциях, сразу после строки <code>%%{HTTP:Cookie} !^.*(comment_author_|%s|wp-postpass_).*$</code> добавьте эти строки: (сделайте это дважды, однократно для каждой секции)"
 
 #: wp-cache.php:361
 msgid "Delete the plugin mod_rewrite rules in %s.htaccess enclosed by <code># BEGIN WPSuperCache</code> and <code># END WPSuperCache</code> and let the plugin regenerate them by reloading this page."
@@ -1460,6 +1480,10 @@ msgstr "Внимание! Папка %s доступна для записи!"
 #: wp-cache.php:309 wp-cache.php:337 wp-cache.php:409 wp-cache.php:2165
 msgid "Dismiss"
 msgstr "Отклонить"
+
+#: wp-cache.php:304
+msgid "Garbage collection by this plugin clears out expired and old cached pages on a regular basis. Use <a href=\"#expirytime\">this form</a> to enable it."
+msgstr "Сборка мусора этим плагином регулярно очищает истекшие и старые закешированные страницы. Используйте <a href=\"#expirytime\">эту форму</a> чтобы включить ее."
 
 #: wp-cache.php:303
 msgid "Warning! Garbage collection is not scheduled!"
@@ -1560,6 +1584,14 @@ msgstr "Пожалуйста, создайте файл %s /wp-cache-config.php 
 #: wp-cache-phase2.php:1347
 msgid "[%1$s] WP Super Cache GC Report"
 msgstr "Отчёт сборщика мусора [%1$s] WP Super Cache"
+
+#: wp-cache-phase2.php:1338
+msgid "Cache expiry cron job took more than 30 seconds. You should probably run the garbage collector more often."
+msgstr "Задача планировщика по очистке кеша заняла более 30 секунд. Возможно вам следует запускать сборщик мусора чаще."
+
+#: wp-cache-phase2.php:1334
+msgid "Cache expiry cron job failed. Job will run again in 10 seconds."
+msgstr "Задача планировщика по очистке завершилась неудачей. Задача будет снова запущена через 10 секунд."
 
 #: plugins/wptouch.php:45
 msgid "WPTouch plugin detected! Please go to the Supercache plugins page and enable the WPTouch helper plugin."

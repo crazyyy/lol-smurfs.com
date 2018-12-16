@@ -175,5 +175,3 @@
       <div id="cm-optin-submit" class="ui disabled primary approve button">Sign Up</div>
     </div>
   </div>
-
-
